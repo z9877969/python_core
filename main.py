@@ -81,11 +81,6 @@ def get_file_data(file):
     return {"name": filename, "extension": extension}
 
 
-# def separate_filename(file):
-#     file_data = get_file_name(file)
-#     return {"name": name, "extension": file_inst.suffix}
-
-
 def normalize_file_name(file):
     file_chunks = get_file_data(file)
     return normalize(file_chunks["name"]) + (file_chunks["extension"] if file_chunks["extension"] else "")
@@ -101,5 +96,3 @@ abs_dir_path = P(dir_path).resolve()
 # absolute_path = P(dir_path, "../../").resolve()
 
 sort_heap(dir_path)
-
-# os.mkdir("../test-1")
